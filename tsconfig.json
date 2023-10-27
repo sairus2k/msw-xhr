@@ -1,7 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "baseUrl": ".",
     "types": ["vitest/globals"],
+    "paths": {
+      "~/*": ["./*"]
+    }
   },
-  "include": ["./**/*.ts"]
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
 }
