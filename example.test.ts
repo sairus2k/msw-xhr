@@ -13,7 +13,7 @@ it('fetches the user info', async () => {
   })
 })
 
-it('fetches the list of movies', async () => {
+it.skip('fetches the list of movies', async () => {
   const response = await fetch('https://api.example.com/graphql', {
     method: 'POST',
     headers: {

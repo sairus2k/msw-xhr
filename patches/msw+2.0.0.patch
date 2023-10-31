@@ -1,0 +1,23 @@
+diff --git a/node_modules/msw/lib/native/index.mjs b/node_modules/msw/lib/native/index.mjs
+index 8ad5b4f..dcf50e8 100644
+--- a/node_modules/msw/lib/native/index.mjs
++++ b/node_modules/msw/lib/native/index.mjs
+@@ -58,18 +58,6 @@ var SetupServerApi = class extends SetupApi {
+    */
+   init() {
+     this.interceptor.on("request", (_0) => __async(this, [_0], function* ({ request, requestId }) {
+-      if (typeof setMaxListeners === "function") {
+-        try {
+-          setMaxListeners(
+-            Math.max(defaultMaxListeners, this.currentHandlers.length),
+-            request.signal
+-          );
+-        } catch (error) {
+-          if (!(isNodeException(error) && error.code === "ERR_INVALID_ARG_TYPE")) {
+-            throw error;
+-          }
+-        }
+-      }
+       const response = yield handleRequest(
+         request,
+         requestId,

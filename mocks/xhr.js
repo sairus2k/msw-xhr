@@ -582,6 +582,26 @@ class XMLHttpRequest extends EventTarget {
     }
     super.addEventListener(type, listener)
   }
+
+  onload() {
+    throw new Error('Should be implemented')
+  }
+
+  onerror() {
+    throw new Error('Should be implemented')
+  }
+
+  ontimeout() {
+    throw new Error('Should be implemented')
+  }
+
+  onabort() {
+    throw new Error('Should be implemented')
+  }
+
+  onreadystatechange() {
+    throw new Error('Should be implemented')
+  }
 }
 
 export default XMLHttpRequest
