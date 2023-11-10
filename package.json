@@ -2,15 +2,14 @@
   "name": "with-vitest",
   "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "postinstall": "npx patch-package"
+    "test": "vitest run"
   },
   "devDependencies": {
     "base64-js": "^1.5.1",
     "event-target-shim": "^6.0.2",
     "invariant": "^2.2.4",
     "jsdom": "^21.1.1",
-    "msw": "2.0.4",
+    "msw": "2.0.5",
     "react-native-fetch-api": "^3.0.0",
     "typescript": "^5.0.4",
     "vitest": "^0.30.1",
